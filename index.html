@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Резюме разработчика</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -15,41 +18,117 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:"Segoe UI",sans-serif;
+font-family:'Manrope', sans-serif;
 }
 
 body{
 
-color:#2e3b42;
+background:#f2f6fb;
+color:#36454f;
 overflow-x:hidden;
-
-background:
-
-radial-gradient(circle at 20% 30%, #cfe3f1, transparent 45%),
-radial-gradient(circle at 80% 20%, #d7c9f3, transparent 40%),
-radial-gradient(circle at 60% 80%, #c8e2dc, transparent 45%),
-radial-gradient(circle at 30% 70%, #dcd3f6, transparent 40%),
-
-#e9f2f7;
 
 }
 
-/* декоративные точки */
+/* ФОН */
 
-body::after{
+.background{
 
-content:"";
 position:fixed;
-top:0;
-left:0;
 width:100%;
 height:100%;
+z-index:-1;
+overflow:hidden;
 
-background-image:radial-gradient(#9fbad0 1px, transparent 1px);
-background-size:18px 18px;
+}
 
-opacity:0.15;
-pointer-events:none;
+/* акварельные пятна */
+
+.blob{
+
+position:absolute;
+filter:blur(70px);
+opacity:0.75;
+
+}
+
+.blob1{
+width:420px;
+height:420px;
+background:#cfe7f2;
+top:10%;
+left:8%;
+}
+
+.blob2{
+width:360px;
+height:360px;
+background:#d7d0f2;
+top:55%;
+left:20%;
+}
+
+.blob3{
+width:420px;
+height:420px;
+background:#c4e1dc;
+top:25%;
+right:8%;
+}
+
+.blob4{
+width:300px;
+height:300px;
+background:#e0d8ff;
+bottom:10%;
+right:25%;
+}
+
+/* точки */
+
+.dots{
+
+position:absolute;
+width:300px;
+height:300px;
+background-image:radial-gradient(#8ea9c0 1px, transparent 1px);
+background-size:12px 12px;
+opacity:0.25;
+
+}
+
+.dots1{
+top:120px;
+right:120px;
+}
+
+.dots2{
+bottom:120px;
+left:150px;
+}
+
+/* декоративные акварельные картинки */
+
+.paint{
+
+position:absolute;
+opacity:0.35;
+filter:blur(2px);
+
+}
+
+.paint1{
+
+top:40%;
+left:5%;
+width:280px;
+
+}
+
+.paint2{
+
+bottom:15%;
+right:8%;
+width:260px;
 
 }
 
@@ -68,7 +147,7 @@ padding-bottom:60px;
 
 nav{
 
-padding:30px 0;
+padding:25px 0;
 text-align:center;
 
 }
@@ -77,7 +156,7 @@ nav a{
 
 margin:0 18px;
 text-decoration:none;
-color:#4b5d66;
+color:#4b5f6a;
 font-weight:500;
 
 }
@@ -91,7 +170,7 @@ opacity:0.6;
 header{
 
 text-align:center;
-padding:50px 0;
+padding:60px 0;
 
 }
 
@@ -100,13 +179,13 @@ padding:50px 0;
 width:150px;
 height:150px;
 
-background:url("https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5") center/cover;
+background:#e6eef7;
 
-border-radius:10px;
+border-radius:8px;
 
 margin:auto;
 
-box-shadow:0 15px 30px rgba(0,0,0,0.15);
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 
 }
 
@@ -114,6 +193,7 @@ h1{
 
 margin-top:20px;
 font-size:34px;
+font-weight:600;
 
 }
 
@@ -121,17 +201,15 @@ font-size:34px;
 
 .card{
 
-background:rgba(255,255,255,0.35);
-
-backdrop-filter:blur(18px);
+background:rgba(255,255,255,0.65);
+backdrop-filter:blur(14px);
 
 padding:30px;
-
 margin-top:30px;
 
 border-radius:6px;
 
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
+box-shadow:0 10px 25px rgba(0,0,0,0.07);
 
 position:relative;
 
@@ -139,21 +217,22 @@ position:relative;
 
 /* фиолетовый акцент */
 
-.card::before{
+.card::after{
 
 content:"";
 position:absolute;
 
-top:-2px;
-left:0;
+bottom:-8px;
+left:40px;
 
-width:60px;
-height:4px;
+width:140px;
+height:3px;
 
 background:linear-gradient(
 90deg,
-#8da2e3,
-#b8a4f0
+#9dc6d8,
+#c6b9ff,
+transparent
 );
 
 }
@@ -171,11 +250,11 @@ margin-top:15px;
 
 .lang{
 
-background:rgba(255,255,255,0.6);
-
+background:white;
 padding:8px 14px;
-
 border-radius:4px;
+
+box-shadow:0 5px 10px rgba(0,0,0,0.05);
 
 font-size:14px;
 
@@ -185,7 +264,7 @@ gap:8px;
 
 }
 
-/* список */
+/* списки */
 
 ul{
 
@@ -195,9 +274,7 @@ padding-left:20px;
 }
 
 li{
-
-margin:6px 0;
-
+margin:7px 0;
 }
 
 /* контакты */
@@ -207,26 +284,7 @@ margin:6px 0;
 display:block;
 margin:8px 0;
 text-decoration:none;
-color:#2e3b42;
-
-}
-
-/* декоративная акварель */
-
-.art{
-
-margin-top:40px;
-
-opacity:0.7;
-
-}
-
-.art img{
-
-width:100%;
-border-radius:6px;
-
-filter:blur(0.2px);
+color:#36454f;
 
 }
 
@@ -250,6 +308,21 @@ font-size:14px;
 </head>
 
 <body>
+
+<div class="background">
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
+<div class="blob blob4"></div>
+
+<div class="dots dots1"></div>
+<div class="dots dots2"></div>
+
+<img class="paint paint1" src="https://www.transparenttextures.com/patterns/watercolor.png">
+<img class="paint paint2" src="https://www.transparenttextures.com/patterns/watercolor.png">
+
+</div>
 
 <div class="container">
 
@@ -302,25 +375,10 @@ font-size:14px;
 
 <div class="languages">
 
-<div class="lang">
-<i class="fa-brands fa-python"></i>
-Python (junior)
-</div>
-
-<div class="lang">
-<i class="fa-brands fa-java"></i>
-Java (junior)
-</div>
-
-<div class="lang">
-<i class="fa-brands fa-js"></i>
-JavaScript (junior)
-</div>
-
-<div class="lang">
-<i class="fa-solid fa-code"></i>
-Kotlin (junior)
-</div>
+<div class="lang"><i class="fa-brands fa-python"></i>Python (junior)</div>
+<div class="lang"><i class="fa-brands fa-java"></i>Java (junior)</div>
+<div class="lang"><i class="fa-brands fa-js"></i>JavaScript (junior)</div>
+<div class="lang"><i class="fa-solid fa-code"></i>Kotlin (junior)</div>
 
 </div>
 
@@ -336,18 +394,18 @@ Kotlin (junior)
 
 <ul>
 
-<li>Java (syntax, core, multithreading, collections)</li>
-<li>Работа с IntelliJ IDEA</li>
-<li>Python разработка</li>
-<li>Создание интерфейсов (Tkinter)</li>
-<li>Google Colab и Jupyter Notebook</li>
-<li>Использование Inference API</li>
-<li>Excel и Google Sheets (продвинутый уровень)</li>
-<li>Visual Studio Code</li>
-<li>Web-разработка</li>
-<li>Динамическое программирование</li>
+<li>Технологии Java (реализация проектов, IntelliJ IDEA, базы данных)</li>
+<li>Курс Java (syntax, core, multithreading, collections)</li>
+<li>Теория информации (шифрование, аналитические методы, энтропия)</li>
+<li>Системы искусственного интеллекта (Google Colab, Jupyter, Inference API)</li>
+<li>Разработка интерфейса пользователя (Tkinter)</li>
+<li>Курсовая работа — игра The Knight на Python</li>
+<li>Профориентационный проект (Figma, RenPy, управление проектом)</li>
+<li>Основы Big Data и анализа данных (Excel, Google Sheets)</li>
+<li>Web-технологии (Visual Studio Code)</li>
+<li>Инженерный практикум (динамическое программирование, Codeforces)</li>
+<li>Математические основы ИТ (линейная алгебра, матрицы)</li>
 <li>Алгоритмы и структуры данных</li>
-<li>Линейная алгебра и работа с матрицами</li>
 
 </ul>
 
@@ -365,9 +423,9 @@ Kotlin (junior)
 
 <li>Работа в команде</li>
 <li>Долгая концентрация на задачах</li>
-<li>Организованный режим дня</li>
-<li>Работа в установленные сроки</li>
-<li>Ответственность за результат</li>
+<li>Соблюдение сроков выполнения</li>
+<li>Налаженный режим дня</li>
+<li>Коммуникация и взаимодействие с командой</li>
 
 </ul>
 
@@ -413,12 +471,6 @@ Kotlin (junior)
 </div>
 
 </section>
-
-<div class="art">
-
-<img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b">
-
-</div>
 
 </div>
 
