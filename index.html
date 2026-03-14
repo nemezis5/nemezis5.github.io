@@ -20,96 +20,40 @@ font-family:"Segoe UI",sans-serif;
 
 body{
 
-background:#eef5f8;
-color:#2f3e46;
+color:#2e3b42;
 overflow-x:hidden;
 
+background:
+
+radial-gradient(circle at 20% 30%, #cfe3f1, transparent 45%),
+radial-gradient(circle at 80% 20%, #d7c9f3, transparent 40%),
+radial-gradient(circle at 60% 80%, #c8e2dc, transparent 45%),
+radial-gradient(circle at 30% 70%, #dcd3f6, transparent 40%),
+
+#e9f2f7;
+
 }
 
-/* ------------------- */
-/* АКВАРЕЛЬНЫЙ ФОН */
-/* ------------------- */
+/* декоративные точки */
 
-.background{
+body::after{
 
+content:"";
 position:fixed;
-width:100%;
-height:100%;
 top:0;
 left:0;
-z-index:-1;
-overflow:hidden;
+width:100%;
+height:100%;
+
+background-image:radial-gradient(#9fbad0 1px, transparent 1px);
+background-size:18px 18px;
+
+opacity:0.15;
+pointer-events:none;
 
 }
 
-/* акварельные пятна */
-
-.blob{
-
-position:absolute;
-filter:blur(60px);
-opacity:0.7;
-
-}
-
-.blob1{
-width:420px;
-height:420px;
-background:#cfe7f2;
-top:10%;
-left:10%;
-}
-
-.blob2{
-width:350px;
-height:350px;
-background:#b7d7d2;
-top:60%;
-left:20%;
-}
-
-.blob3{
-width:400px;
-height:400px;
-background:#d9e9f1;
-top:30%;
-right:10%;
-}
-
-.blob4{
-width:300px;
-height:300px;
-background:#c3dde8;
-bottom:10%;
-right:20%;
-}
-
-/* точечная сетка */
-
-.dots{
-
-position:absolute;
-width:300px;
-height:300px;
-background-image:radial-gradient(#9bbbc9 1px, transparent 1px);
-background-size:12px 12px;
-opacity:0.25;
-
-}
-
-.dots1{
-top:120px;
-right:120px;
-}
-
-.dots2{
-bottom:120px;
-left:160px;
-}
-
-/* ------------------- */
-/* ОСНОВНОЙ КОНТЕЙНЕР */
-/* ------------------- */
+/* контейнер */
 
 .container{
 
@@ -124,7 +68,7 @@ padding-bottom:60px;
 
 nav{
 
-padding:25px 0;
+padding:30px 0;
 text-align:center;
 
 }
@@ -133,7 +77,7 @@ nav a{
 
 margin:0 18px;
 text-decoration:none;
-color:#40565f;
+color:#4b5d66;
 font-weight:500;
 
 }
@@ -147,7 +91,7 @@ opacity:0.6;
 header{
 
 text-align:center;
-padding:60px 0;
+padding:50px 0;
 
 }
 
@@ -156,13 +100,13 @@ padding:60px 0;
 width:150px;
 height:150px;
 
-background:#dfeef5;
+background:url("https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5") center/cover;
 
 border-radius:10px;
 
 margin:auto;
 
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+box-shadow:0 15px 30px rgba(0,0,0,0.15);
 
 }
 
@@ -173,44 +117,43 @@ font-size:34px;
 
 }
 
-/* ------------------- */
-/* КАРТОЧКИ */
-/* ------------------- */
+/* карточки */
 
 .card{
 
-background:rgba(255,255,255,0.6);
-backdrop-filter:blur(14px);
+background:rgba(255,255,255,0.35);
+
+backdrop-filter:blur(18px);
 
 padding:30px;
+
 margin-top:30px;
 
 border-radius:6px;
 
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 
 position:relative;
 
 }
 
-/* декоративная линия */
+/* фиолетовый акцент */
 
-.card::after{
+.card::before{
 
 content:"";
 position:absolute;
 
-bottom:-10px;
-left:40px;
+top:-2px;
+left:0;
 
-width:120px;
-height:3px;
+width:60px;
+height:4px;
 
 background:linear-gradient(
 90deg,
-#9dc6d8,
-#b7d7d2,
-transparent
+#8da2e3,
+#b8a4f0
 );
 
 }
@@ -228,13 +171,11 @@ margin-top:15px;
 
 .lang{
 
-background:white;
+background:rgba(255,255,255,0.6);
 
 padding:8px 14px;
 
 border-radius:4px;
-
-box-shadow:0 5px 10px rgba(0,0,0,0.05);
 
 font-size:14px;
 
@@ -254,7 +195,9 @@ padding-left:20px;
 }
 
 li{
-margin:7px 0;
+
+margin:6px 0;
+
 }
 
 /* контакты */
@@ -264,7 +207,26 @@ margin:7px 0;
 display:block;
 margin:8px 0;
 text-decoration:none;
-color:#2f3e46;
+color:#2e3b42;
+
+}
+
+/* декоративная акварель */
+
+.art{
+
+margin-top:40px;
+
+opacity:0.7;
+
+}
+
+.art img{
+
+width:100%;
+border-radius:6px;
+
+filter:blur(0.2px);
 
 }
 
@@ -289,27 +251,14 @@ font-size:14px;
 
 <body>
 
-<!-- художественный фон -->
-
-<div class="background">
-
-<div class="blob blob1"></div>
-<div class="blob blob2"></div>
-<div class="blob blob3"></div>
-<div class="blob blob4"></div>
-
-<div class="dots dots1"></div>
-<div class="dots dots2"></div>
-
-</div>
-
 <div class="container">
 
 <nav>
 
 <a href="#about">Обо мне</a>
 <a href="#skills">Языки</a>
-<a href="#study">Обучение</a>
+<a href="#hard">Hard Skills</a>
+<a href="#soft">Soft Skills</a>
 <a href="#work">Опыт</a>
 <a href="#contact">Контакты</a>
 
@@ -379,26 +328,46 @@ Kotlin (junior)
 
 </section>
 
-<section id="study">
+<section id="hard">
 
 <div class="card">
 
-<h2>Изученные дисциплины</h2>
+<h2>Hard Skills</h2>
 
 <ul>
 
-<li>Технологии Java (реализация проектов, IntelliJ IDEA, базы данных)</li>
-<li>Курс Java (syntax, core, multithreading, collections)</li>
-<li>Теория информации (шифрование, аналитические методы, энтропия)</li>
-<li>Системы искусственного интеллекта (Google Colab, Jupyter, Inference API)</li>
-<li>Разработка интерфейса пользователя (Tkinter)</li>
-<li>Курсовая работа — игра The Knight на Python</li>
-<li>Профориентационный проект (Figma, RenPy, управление проектом)</li>
-<li>Основы Big Data и анализа данных (Excel, Google Sheets)</li>
-<li>Web-технологии (Visual Studio Code)</li>
-<li>Инженерный практикум (динамическое программирование, Codeforces)</li>
-<li>Математические основы ИТ (линейная алгебра, матрицы)</li>
+<li>Java (syntax, core, multithreading, collections)</li>
+<li>Работа с IntelliJ IDEA</li>
+<li>Python разработка</li>
+<li>Создание интерфейсов (Tkinter)</li>
+<li>Google Colab и Jupyter Notebook</li>
+<li>Использование Inference API</li>
+<li>Excel и Google Sheets (продвинутый уровень)</li>
+<li>Visual Studio Code</li>
+<li>Web-разработка</li>
+<li>Динамическое программирование</li>
 <li>Алгоритмы и структуры данных</li>
+<li>Линейная алгебра и работа с матрицами</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="soft">
+
+<div class="card">
+
+<h2>Soft Skills</h2>
+
+<ul>
+
+<li>Работа в команде</li>
+<li>Долгая концентрация на задачах</li>
+<li>Организованный режим дня</li>
+<li>Работа в установленные сроки</li>
+<li>Ответственность за результат</li>
 
 </ul>
 
@@ -444,6 +413,12 @@ Kotlin (junior)
 </div>
 
 </section>
+
+<div class="art">
+
+<img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b">
+
+</div>
 
 </div>
 
