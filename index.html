@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Developer Resume</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Segoe UI", sans-serif;
+}
+
+body{
+
+background: linear-gradient(-45deg,#eaf3f7,#a6c6d8,#7fa7be,#eaf3f7);
+background-size: 400% 400%;
+animation: gradient 12s ease infinite;
+color:#2e3f4b;
+
+}
+
+@keyframes gradient{
+
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+
+}
+
+.container{
+
+width:90%;
+max-width:1100px;
+margin:auto;
+
+}
+
+nav{
+
+position:sticky;
+top:0;
+backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.4);
+padding:15px;
+z-index:100;
+
+}
+
+nav ul{
+
+display:flex;
+justify-content:center;
+gap:30px;
+list-style:none;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:#2e3f4b;
+font-weight:600;
+
+}
+
+header{
+
+text-align:center;
+padding:80px 20px;
+
+}
+
+.avatar{
+
+width:130px;
+height:130px;
+border-radius:50%;
+background:#fff;
+margin:auto;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+
+}
+
+h1{
+
+margin-top:20px;
+font-size:40px;
+
+}
+
+section{
+
+margin:40px 0;
+
+}
+
+.card{
+
+background:rgba(255,255,255,0.5);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:20px;
+box-shadow:0 15px 30px rgba(0,0,0,0.1);
+transition:0.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-5px) scale(1.02);
+
+}
+
+.skills{
+
+display:grid;
+gap:15px;
+
+}
+
+.skill{
+
+margin-top:10px;
+
+}
+
+.bar{
+
+height:10px;
+background:#ddd;
+border-radius:10px;
+overflow:hidden;
+
+}
+
+.progress{
+
+height:100%;
+background:#4f6f81;
+width:0;
+animation:load 2s forwards;
+
+}
+
+@keyframes load{
+
+to{width:70%}
+
+}
+
+.languages{
+
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+
+}
+
+.lang{
+
+display:flex;
+align-items:center;
+gap:10px;
+background:white;
+padding:10px 15px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+.projects{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+
+}
+
+.project{
+
+padding:20px;
+border-radius:15px;
+background:white;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+
+}
+
+.project:hover{
+
+transform:scale(1.05);
+
+}
+
+.contact{
+
+display:flex;
+flex-direction:column;
+gap:10px;
+
+}
+
+.contact a{
+
+text-decoration:none;
+color:#2e3f4b;
+font-size:18px;
+
+}
+
+footer{
+
+text-align:center;
+margin:40px 0;
+opacity:0.6;
+
+}
+
+@media(max-width:700px){
+
+h1{
+font-size:28px;
+}
+
+nav ul{
+gap:15px;
+font-size:14px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#study">Education</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<header>
+
+<div class="avatar"></div>
+
+<h1>Your Name</h1>
+
+<p>Junior Software Developer</p>
+
+</header>
+
+<div class="container">
+
+<section id="about">
+
+<div class="card">
+
+<h2>About Me</h2>
+
+<p>
+
+Second-year programming student interested in software development,
+AI systems and web technologies.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<div class="card">
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill">
+
+Python
+
+<div class="bar">
+
+<div class="progress"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+Java
+
+<div class="bar">
+
+<div class="progress"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+JavaScript
+
+<div class="bar">
+
+<div class="progress"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+Kotlin
+
+<div class="bar">
+
+<div class="progress"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>Programming Languages</h2>
+
+<div class="languages">
+
+<div class="lang">
+
+<i class="fa-brands fa-python"></i>
+Python
+
+</div>
+
+<div class="lang">
+
+<i class="fa-brands fa-java"></i>
+Java
+
+</div>
+
+<div class="lang">
+
+<i class="fa-brands fa-js"></i>
+JavaScript
+
+</div>
+
+<div class="lang">
+
+<i class="fa-solid fa-code"></i>
+Kotlin
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<div class="card">
+
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+
+<h3>The Knight</h3>
+
+<p>
+
+Demo game created with Python with accessibility support.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Visual Novel</h3>
+
+<p>
+
+Team project created using RenPy.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>AI Systems</h3>
+
+<p>
+
+Implementation of AI systems in Google Colab.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="study">
+
+<div class="card">
+
+<h2>University Disciplines</h2>
+
+<ul>
+
+<li>Java Technologies</li>
+<li>Java Core and Multithreading</li>
+<li>Theory of Information</li>
+<li>Artificial Intelligence Systems</li>
+<li>User Interface Development (Tkinter)</li>
+<li>Big Data Basics</li>
+<li>Web Technologies</li>
+<li>Engineering Practicum</li>
+<li>Algorithms and Data Structures</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="card">
+
+<h2>Contact</h2>
+
+<div class="contact">
+
+<a href="#"><i class="fa-solid fa-envelope"></i> email</a>
+
+<a href="#"><i class="fa-brands fa-telegram"></i> telegram</a>
+
+<a href="#"><i class="fa-brands fa-github"></i> github</a>
+
+<a href="#"><i class="fa-brands fa-linkedin"></i> linkedin</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Developer Portfolio
+
+</footer>
+
+</div>
+
+</body>
+</html>
